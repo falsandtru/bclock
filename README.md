@@ -34,53 +34,53 @@ LRUCache: spica/lru<br>
 DW-Cache: spica/cache<br>
 
 ```
-'Clock    new x 982,257 ops/sec ±4.80% (102 runs sampled)'
+'Clock    new x 1,056,524 ops/sec ±5.05% (115 runs sampled)'
 
-'ISCCache new x 11,457 ops/sec ±1.49% (117 runs sampled)'
+'ISCCache new x 11,152 ops/sec ±1.13% (115 runs sampled)'
 
-'LRUCache new x 21,184,221 ops/sec ±0.18% (123 runs sampled)'
+'LRUCache new x 19,712,710 ops/sec ±0.28% (121 runs sampled)'
 
-'DW-Cache new x 5,459,649 ops/sec ±0.41% (123 runs sampled)'
+'DW-Cache new x 5,291,110 ops/sec ±1.07% (121 runs sampled)'
 
-'Clock    simulation 100 x 10,520,040 ops/sec ±2.24% (120 runs sampled)'
+'Clock    simulation 100 x 10,438,626 ops/sec ±2.32% (119 runs sampled)'
 
-'ISCCache simulation 100 x 8,148,950 ops/sec ±1.87% (119 runs sampled)'
+'ISCCache simulation 100 x 7,728,401 ops/sec ±1.90% (120 runs sampled)'
 
-'LRUCache simulation 100 x 9,110,929 ops/sec ±2.52% (118 runs sampled)'
+'LRUCache simulation 100 x 8,746,203 ops/sec ±2.81% (118 runs sampled)'
 
-'DW-Cache simulation 100 x 6,778,262 ops/sec ±2.27% (120 runs sampled)'
+'DW-Cache simulation 100 x 6,489,576 ops/sec ±2.09% (120 runs sampled)'
 
-'Clock    simulation 1,000 x 8,738,216 ops/sec ±2.20% (118 runs sampled)'
+'Clock    simulation 1,000 x 8,852,542 ops/sec ±2.33% (118 runs sampled)'
 
-'ISCCache simulation 1,000 x 7,298,708 ops/sec ±1.85% (119 runs sampled)'
+'ISCCache simulation 1,000 x 6,982,545 ops/sec ±1.92% (119 runs sampled)'
 
-'LRUCache simulation 1,000 x 8,120,011 ops/sec ±2.55% (117 runs sampled)'
+'LRUCache simulation 1,000 x 7,732,134 ops/sec ±2.54% (117 runs sampled)'
 
-'DW-Cache simulation 1,000 x 6,656,796 ops/sec ±2.28% (119 runs sampled)'
+'DW-Cache simulation 1,000 x 6,431,153 ops/sec ±2.22% (120 runs sampled)'
 
-'Clock    simulation 10,000 x 8,546,724 ops/sec ±2.24% (119 runs sampled)'
+'Clock    simulation 10,000 x 8,626,526 ops/sec ±2.28% (120 runs sampled)'
 
-'ISCCache simulation 10,000 x 6,479,979 ops/sec ±1.81% (120 runs sampled)'
+'ISCCache simulation 10,000 x 6,428,085 ops/sec ±1.87% (120 runs sampled)'
 
-'LRUCache simulation 10,000 x 7,455,903 ops/sec ±2.42% (120 runs sampled)'
+'LRUCache simulation 10,000 x 7,104,411 ops/sec ±2.31% (119 runs sampled)'
 
-'DW-Cache simulation 10,000 x 6,469,169 ops/sec ±1.95% (121 runs sampled)'
+'DW-Cache simulation 10,000 x 6,521,010 ops/sec ±1.89% (119 runs sampled)'
 
-'Clock    simulation 100,000 x 5,733,062 ops/sec ±1.61% (118 runs sampled)'
+'Clock    simulation 100,000 x 5,355,927 ops/sec ±1.83% (116 runs sampled)'
 
-'ISCCache simulation 100,000 x 3,179,438 ops/sec ±1.84% (109 runs sampled)'
+'ISCCache simulation 100,000 x 2,786,209 ops/sec ±1.68% (107 runs sampled)'
 
-'LRUCache simulation 100,000 x 3,746,025 ops/sec ±2.09% (116 runs sampled)'
+'LRUCache simulation 100,000 x 3,224,443 ops/sec ±1.93% (114 runs sampled)'
 
-'DW-Cache simulation 100,000 x 3,319,309 ops/sec ±2.16% (114 runs sampled)'
+'DW-Cache simulation 100,000 x 2,877,884 ops/sec ±2.09% (112 runs sampled)'
 
-'Clock    simulation 1,000,000 x 2,949,250 ops/sec ±3.75% (104 runs sampled)'
+'Clock    simulation 1,000,000 x 2,295,728 ops/sec ±3.69% (107 runs sampled)'
 
-'ISCCache simulation 1,000,000 x 1,487,123 ops/sec ±3.06% (100 runs sampled)'
+'ISCCache simulation 1,000,000 x 1,416,245 ops/sec ±2.44% (108 runs sampled)'
 
-'LRUCache simulation 1,000,000 x 1,725,359 ops/sec ±4.29% (106 runs sampled)'
+'LRUCache simulation 1,000,000 x 1,438,230 ops/sec ±4.48% (103 runs sampled)'
 
-'DW-Cache simulation 1,000,000 x 1,740,517 ops/sec ±2.10% (110 runs sampled)'
+'DW-Cache simulation 1,000,000 x 1,476,028 ops/sec ±2.29% (111 runs sampled)'
 ```
 
 ```ts
@@ -90,102 +90,105 @@ const key = random() < 0.8
 cache.get(key) ?? cache.set(key, {});
 ```
 
+Clock outperforms LRU, especially in the get operation by marking algorithm.
+Therefore, when the cache is less likely to overflow, Clock is particularly faster than LRU.
+
 ```
-'Clock    set 10 100% x 22,305,874 ops/sec ±0.22% (123 runs sampled)'
+'Clock    get 10 100% x 32,672,255 ops/sec ±0.31% (123 runs sampled)'
 
-'ISCCache set 10 100% x 12,731,297 ops/sec ±0.78% (121 runs sampled)'
+'ISCCache get 10 100% x 19,828,816 ops/sec ±0.82% (122 runs sampled)'
 
-'LRUCache set 10 100% x 23,158,603 ops/sec ±0.95% (121 runs sampled)'
+'LRUCache get 10 100% x 21,422,993 ops/sec ±0.87% (121 runs sampled)'
 
-'DW-Cache set 10 100% x 17,736,787 ops/sec ±0.85% (123 runs sampled)'
+'DW-Cache get 10 100% x 17,736,755 ops/sec ±0.78% (123 runs sampled)'
 
-'Clock    set 100 100% x 19,494,770 ops/sec ±1.31% (122 runs sampled)'
+'Clock    get 100 100% x 25,438,647 ops/sec ±0.86% (122 runs sampled)'
 
-'ISCCache set 100 100% x 11,676,109 ops/sec ±0.86% (122 runs sampled)'
+'ISCCache get 100 100% x 18,637,866 ops/sec ±0.80% (122 runs sampled)'
 
-'LRUCache set 100 100% x 19,785,985 ops/sec ±1.06% (121 runs sampled)'
+'LRUCache get 100 100% x 16,778,520 ops/sec ±0.95% (122 runs sampled)'
 
-'DW-Cache set 100 100% x 15,803,401 ops/sec ±0.91% (122 runs sampled)'
+'DW-Cache get 100 100% x 15,832,220 ops/sec ±0.15% (123 runs sampled)'
 
-'Clock    set 1,000 100% x 18,081,653 ops/sec ±1.12% (122 runs sampled)'
+'Clock    get 1,000 100% x 24,481,257 ops/sec ±1.00% (122 runs sampled)'
 
-'ISCCache set 1,000 100% x 11,678,237 ops/sec ±1.01% (122 runs sampled)'
+'ISCCache get 1,000 100% x 18,231,286 ops/sec ±0.69% (123 runs sampled)'
 
-'LRUCache set 1,000 100% x 18,168,980 ops/sec ±1.08% (121 runs sampled)'
+'LRUCache get 1,000 100% x 15,222,696 ops/sec ±1.00% (122 runs sampled)'
 
-'DW-Cache set 1,000 100% x 14,243,513 ops/sec ±0.85% (122 runs sampled)'
+'DW-Cache get 1,000 100% x 14,379,872 ops/sec ±0.91% (122 runs sampled)'
 
-'Clock    set 10,000 100% x 16,114,965 ops/sec ±1.45% (120 runs sampled)'
+'Clock    get 10,000 100% x 24,817,586 ops/sec ±0.13% (123 runs sampled)'
 
-'ISCCache set 10,000 100% x 8,289,177 ops/sec ±0.88% (121 runs sampled)'
+'ISCCache get 10,000 100% x 16,835,483 ops/sec ±0.66% (123 runs sampled)'
 
-'LRUCache set 10,000 100% x 15,332,748 ops/sec ±1.16% (120 runs sampled)'
+'LRUCache get 10,000 100% x 13,821,867 ops/sec ±0.96% (122 runs sampled)'
 
-'DW-Cache set 10,000 100% x 11,754,163 ops/sec ±1.01% (122 runs sampled)'
+'DW-Cache get 10,000 100% x 13,074,128 ops/sec ±0.95% (123 runs sampled)'
 
-'Clock    set 100,000 100% x 5,425,458 ops/sec ±2.17% (116 runs sampled)'
+'Clock    get 100,000 100% x 16,964,630 ops/sec ±0.16% (123 runs sampled)'
 
-'ISCCache set 100,000 100% x 2,514,664 ops/sec ±2.03% (114 runs sampled)'
+'ISCCache get 100,000 100% x 6,325,010 ops/sec ±0.77% (117 runs sampled)'
 
-'LRUCache set 100,000 100% x 4,430,935 ops/sec ±2.66% (115 runs sampled)'
+'LRUCache get 100,000 100% x 5,238,932 ops/sec ±1.13% (118 runs sampled)'
 
-'DW-Cache set 100,000 100% x 3,247,580 ops/sec ±2.36% (111 runs sampled)'
+'DW-Cache get 100,000 100% x 5,059,331 ops/sec ±1.25% (118 runs sampled)'
 
-'Clock    set 1,000,000 100% x 1,677,874 ops/sec ±4.51% (100 runs sampled)'
+'Clock    get 1,000,000 100% x 4,967,390 ops/sec ±1.56% (111 runs sampled)'
 
-'ISCCache set 1,000,000 100% x 993,312 ops/sec ±4.33% (104 runs sampled)'
+'ISCCache get 1,000,000 100% x 1,785,856 ops/sec ±0.41% (119 runs sampled)'
 
-'LRUCache set 1,000,000 100% x 1,478,251 ops/sec ±7.13% (100 runs sampled)'
+'LRUCache get 1,000,000 100% x 1,837,294 ops/sec ±0.46% (117 runs sampled)'
 
-'DW-Cache set 1,000,000 100% x 1,267,294 ops/sec ±6.20% (105 runs sampled)'
+'DW-Cache get 1,000,000 100% x 1,713,573 ops/sec ±0.42% (119 runs sampled)'
 
-'Clock    get 10 100% x 32,404,716 ops/sec ±1.00% (122 runs sampled)'
+'Clock    set 10 0% x 22,524,565 ops/sec ±1.06% (123 runs sampled)'
 
-'ISCCache get 10 100% x 19,908,493 ops/sec ±0.68% (122 runs sampled)'
+'ISCCache set 10 0% x 12,857,566 ops/sec ±0.89% (123 runs sampled)'
 
-'LRUCache get 10 100% x 21,565,802 ops/sec ±0.93% (123 runs sampled)'
+'LRUCache set 10 0% x 23,492,538 ops/sec ±1.32% (123 runs sampled)'
 
-'DW-Cache get 10 100% x 17,865,338 ops/sec ±0.91% (122 runs sampled)'
+'DW-Cache set 10 0% x 17,067,469 ops/sec ±0.83% (122 runs sampled)'
 
-'Clock    get 100 100% x 25,475,779 ops/sec ±0.87% (123 runs sampled)'
+'Clock    set 100 0% x 22,039,880 ops/sec ±1.28% (122 runs sampled)'
 
-'ISCCache get 100 100% x 18,886,910 ops/sec ±0.90% (122 runs sampled)'
+'ISCCache set 100 0% x 12,709,202 ops/sec ±0.94% (122 runs sampled)'
 
-'LRUCache get 100 100% x 16,811,993 ops/sec ±1.08% (123 runs sampled)'
+'LRUCache set 100 0% x 22,648,192 ops/sec ±1.03% (122 runs sampled)'
 
-'DW-Cache get 100 100% x 15,185,083 ops/sec ±1.08% (122 runs sampled)'
+'DW-Cache set 100 0% x 16,191,955 ops/sec ±0.91% (122 runs sampled)'
 
-'Clock    get 1,000 100% x 24,567,618 ops/sec ±0.85% (123 runs sampled)'
+'Clock    set 1,000 0% x 21,068,791 ops/sec ±1.07% (122 runs sampled)'
 
-'ISCCache get 1,000 100% x 18,246,146 ops/sec ±0.87% (122 runs sampled)'
+'ISCCache set 1,000 0% x 12,300,022 ops/sec ±0.93% (123 runs sampled)'
 
-'LRUCache get 1,000 100% x 15,306,355 ops/sec ±0.13% (123 runs sampled)'
+'LRUCache set 1,000 0% x 21,251,109 ops/sec ±1.30% (122 runs sampled)'
 
-'DW-Cache get 1,000 100% x 14,289,403 ops/sec ±1.01% (123 runs sampled)'
+'DW-Cache set 1,000 0% x 15,418,591 ops/sec ±0.89% (122 runs sampled)'
 
-'Clock    get 10,000 100% x 24,723,493 ops/sec ±0.93% (122 runs sampled)'
+'Clock    set 10,000 0% x 19,209,371 ops/sec ±1.26% (122 runs sampled)'
 
-'ISCCache get 10,000 100% x 16,847,125 ops/sec ±0.96% (122 runs sampled)'
+'ISCCache set 10,000 0% x 9,202,332 ops/sec ±0.95% (121 runs sampled)'
 
-'LRUCache get 10,000 100% x 13,870,137 ops/sec ±1.13% (122 runs sampled)'
+'LRUCache set 10,000 0% x 16,819,300 ops/sec ±0.15% (123 runs sampled)'
 
-'DW-Cache get 10,000 100% x 12,798,713 ops/sec ±0.96% (122 runs sampled)'
+'DW-Cache set 10,000 0% x 12,017,503 ops/sec ±0.25% (122 runs sampled)'
 
-'Clock    get 100,000 100% x 16,974,684 ops/sec ±0.73% (121 runs sampled)'
+'Clock    set 100,000 0% x 6,664,401 ops/sec ±1.67% (117 runs sampled)'
 
-'ISCCache get 100,000 100% x 6,046,667 ops/sec ±1.15% (118 runs sampled)'
+'ISCCache set 100,000 0% x 2,931,435 ops/sec ±1.78% (115 runs sampled)'
 
-'LRUCache get 100,000 100% x 4,794,079 ops/sec ±1.60% (114 runs sampled)'
+'LRUCache set 100,000 0% x 5,422,096 ops/sec ±1.56% (116 runs sampled)'
 
-'DW-Cache get 100,000 100% x 3,715,091 ops/sec ±1.36% (116 runs sampled)'
+'DW-Cache set 100,000 0% x 3,958,572 ops/sec ±1.33% (118 runs sampled)'
 
-'Clock    get 1,000,000 100% x 4,020,431 ops/sec ±0.46% (119 runs sampled)'
+'Clock    set 1,000,000 0% x 2,252,767 ops/sec ±3.17% (114 runs sampled)'
 
-'ISCCache get 1,000,000 100% x 1,638,041 ops/sec ±0.36% (121 runs sampled)'
+'ISCCache set 1,000,000 0% x 1,225,992 ops/sec ±2.02% (107 runs sampled)'
 
-'LRUCache get 1,000,000 100% x 1,658,803 ops/sec ±0.33% (118 runs sampled)'
+'LRUCache set 1,000,000 0% x 1,877,150 ops/sec ±2.53% (107 runs sampled)'
 
-'DW-Cache get 1,000,000 100% x 1,596,587 ops/sec ±0.35% (118 runs sampled)'
+'DW-Cache set 1,000,000 0% x 1,483,825 ops/sec ±3.43% (106 runs sampled)'
 ```
 
 ## API
