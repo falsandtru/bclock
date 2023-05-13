@@ -34,61 +34,53 @@ LRUCache: spica/lru<br>
 DW-Cache: spica/cache<br>
 
 ```
-'Clock    new x 1,134,390 ops/sec ±4.50% (114 runs sampled)'
+'Clock    new x 1,328,833 ops/sec ±3.63% (113 runs sampled)'
 
-'ISCCache new x 11,463 ops/sec ±0.69% (116 runs sampled)'
+'ISCCache new x 13,768 ops/sec ±1.00% (120 runs sampled)'
 
-'LRUCache new x 20,900,541 ops/sec ±1.24% (122 runs sampled)'
+'LRUCache new x 27,168,783 ops/sec ±1.50% (122 runs sampled)'
 
-'DW-Cache new x 5,481,159 ops/sec ±0.96% (122 runs sampled)'
+'DW-Cache new x 6,049,201 ops/sec ±0.86% (122 runs sampled)'
 
-'Clock    simulation 10 x 15,871,428 ops/sec ±1.85% (120 runs sampled)'
+'Clock    simulation 100 x 13,493,137 ops/sec ±1.65% (121 runs sampled)'
 
-'ISCCache simulation 10 x 9,412,318 ops/sec ±1.76% (121 runs sampled)'
+'ISCCache simulation 100 x 8,651,793 ops/sec ±1.85% (121 runs sampled)'
 
-'LRUCache simulation 10 x 10,718,719 ops/sec ±2.34% (120 runs sampled)'
+'LRUCache simulation 100 x 10,604,646 ops/sec ±2.24% (120 runs sampled)'
 
-'DW-Cache simulation 10 x 4,362,547 ops/sec ±2.25% (120 runs sampled)'
+'DW-Cache simulation 100 x 7,242,013 ops/sec ±1.65% (121 runs sampled)'
 
-'Clock    simulation 100 x 14,334,611 ops/sec ±1.95% (121 runs sampled)'
+'Clock    simulation 1,000 x 10,694,963 ops/sec ±1.81% (120 runs sampled)'
 
-'ISCCache simulation 100 x 9,775,364 ops/sec ±1.98% (118 runs sampled)'
+'ISCCache simulation 1,000 x 7,700,019 ops/sec ±1.90% (121 runs sampled)'
 
-'LRUCache simulation 100 x 10,746,942 ops/sec ±2.54% (120 runs sampled)'
+'LRUCache simulation 1,000 x 9,184,813 ops/sec ±2.13% (120 runs sampled)'
 
-'DW-Cache simulation 100 x 9,689,094 ops/sec ±1.95% (121 runs sampled)'
+'DW-Cache simulation 1,000 x 7,041,470 ops/sec ±1.77% (120 runs sampled)'
 
-'Clock    simulation 1,000 x 11,367,012 ops/sec ±2.19% (119 runs sampled)'
+'Clock    simulation 10,000 x 10,517,215 ops/sec ±1.78% (122 runs sampled)'
 
-'ISCCache simulation 1,000 x 8,764,445 ops/sec ±1.80% (120 runs sampled)'
+'ISCCache simulation 10,000 x 7,365,593 ops/sec ±1.67% (121 runs sampled)'
 
-'LRUCache simulation 1,000 x 9,440,036 ops/sec ±2.40% (118 runs sampled)'
+'LRUCache simulation 10,000 x 8,685,666 ops/sec ±1.81% (121 runs sampled)'
 
-'DW-Cache simulation 1,000 x 7,036,528 ops/sec ±1.77% (120 runs sampled)'
+'DW-Cache simulation 10,000 x 7,317,621 ops/sec ±1.42% (120 runs sampled)'
 
-'Clock    simulation 10,000 x 10,964,926 ops/sec ±1.92% (121 runs sampled)'
+'Clock    simulation 100,000 x 7,417,826 ops/sec ±1.60% (118 runs sampled)'
 
-'ISCCache simulation 10,000 x 7,818,380 ops/sec ±1.86% (119 runs sampled)'
+'ISCCache simulation 100,000 x 4,523,157 ops/sec ±1.22% (117 runs sampled)'
 
-'LRUCache simulation 10,000 x 8,451,359 ops/sec ±2.22% (120 runs sampled)'
+'LRUCache simulation 100,000 x 5,424,344 ops/sec ±2.10% (119 runs sampled)'
 
-'DW-Cache simulation 10,000 x 7,304,670 ops/sec ±1.58% (121 runs sampled)'
+'DW-Cache simulation 100,000 x 4,190,537 ops/sec ±1.44% (113 runs sampled)'
 
-'Clock    simulation 100,000 x 6,889,926 ops/sec ±1.80% (116 runs sampled)'
+'Clock    simulation 1,000,000 x 4,519,623 ops/sec ±3.63% (106 runs sampled)'
 
-'ISCCache simulation 100,000 x 3,797,242 ops/sec ±1.54% (116 runs sampled)'
+'ISCCache simulation 1,000,000 x 2,081,961 ops/sec ±3.35% (101 runs sampled)'
 
-'LRUCache simulation 100,000 x 4,218,715 ops/sec ±2.15% (111 runs sampled)'
+'LRUCache simulation 1,000,000 x 2,686,808 ops/sec ±3.88% (103 runs sampled)'
 
-'DW-Cache simulation 100,000 x 3,954,103 ops/sec ±1.89% (113 runs sampled)'
-
-'Clock    simulation 1,000,000 x 3,139,573 ops/sec ±3.62% (102 runs sampled)'
-
-'ISCCache simulation 1,000,000 x 1,598,853 ops/sec ±3.60% (101 runs sampled)'
-
-'LRUCache simulation 1,000,000 x 1,739,508 ops/sec ±4.55% (102 runs sampled)'
-
-'DW-Cache simulation 1,000,000 x 1,663,472 ops/sec ±2.02% (108 runs sampled)'
+'DW-Cache simulation 1,000,000 x 2,481,012 ops/sec ±2.54% (111 runs sampled)'
 ```
 
 ```ts
