@@ -2,10 +2,10 @@
 
 ![CI](https://github.com/falsandtru/bclock/workflows/CI/badge.svg)
 
-A cache of the Clock algorithm ***2x faster*** than LRU.
+A clock variant cache algorithm ***2x faster*** than LRU.
 
 - ***2x faster*** than [lru-cache](https://www.npmjs.com/package/lru-cache) which is the most popular and fastest cache package except bclock.
-- ***32x faster*** than the original Clock algorithm in worst-case time complexity.
+- ***32x faster*** than the original clock algorithm in worst-case time complexity.
 
 ## Maintenance
 
