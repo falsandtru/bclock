@@ -94,14 +94,6 @@ Clock outperforms LRU, especially in the get operation by marking algorithm.
 Therefore, when the cache is less likely to overflow, Clock is particularly faster than LRU.
 
 ```
-'Clock    get 10 100% x 32,556,504 ops/sec ±0.96% (123 runs sampled)'
-
-'ISCCache get 10 100% x 19,894,780 ops/sec ±0.69% (122 runs sampled)'
-
-'LRUCache get 10 100% x 21,351,150 ops/sec ±1.14% (123 runs sampled)'
-
-'DW-Cache get 10 100% x 17,935,363 ops/sec ±0.92% (123 runs sampled)'
-
 'Clock    get 100 100% x 25,516,735 ops/sec ±0.87% (123 runs sampled)'
 
 'ISCCache get 100 100% x 18,929,490 ops/sec ±0.70% (123 runs sampled)'
