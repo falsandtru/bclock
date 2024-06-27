@@ -54,7 +54,7 @@ const data = {
     },
     {
       label: 'Clock',
-      data: [2.93, 6.41, 11.29, 22.93, 35.27, 46.99, 55.816, 61.87],
+      data: [2.93, 6.41, 11.29, 22.93, 35.27, 46.99, 55.81, 61.87],
       borderColor: Utils.color(4),
     },
     {
@@ -210,7 +210,7 @@ const data = {
     },
     {
       label: 'Clock',
-      data: [28.25, 31.15, 32.74, 33.88, 34.73, 35.52, 36.24, 36.84],
+      data: [28.26, 31.16, 32.75, 33.88, 34.72, 35.52, 36.24, 36.84],
       borderColor: Utils.color(4),
     },
     {
@@ -232,27 +232,27 @@ const data = {
 ```
 F1 2,500
 LRU   hit ratio 27.74%
-Clock hit ratio 28.25%
-Clock - LRU hit ratio delta 0.50%
+Clock hit ratio 28.26%
+Clock - LRU hit ratio delta 0.52%
 
 F1 5,000
 LRU   hit ratio 30.55%
-Clock hit ratio 31.15%
+Clock hit ratio 31.16%
 Clock - LRU hit ratio delta 0.60%
 
 F1 7,500
 LRU   hit ratio 32.18%
-Clock hit ratio 32.74%
-Clock - LRU hit ratio delta 0.56%
+Clock hit ratio 32.75%
+Clock - LRU hit ratio delta 0.57%
 
 F1 10,000
 LRU   hit ratio 33.27%
 Clock hit ratio 33.88%
-Clock - LRU hit ratio delta 0.61%
+Clock - LRU hit ratio delta 0.60%
 
 F1 12,500
 LRU   hit ratio 34.19%
-Clock hit ratio 34.73%
+Clock hit ratio 34.72%
 Clock - LRU hit ratio delta 0.53%
 
 F1 15,000
@@ -263,12 +263,12 @@ Clock - LRU hit ratio delta 0.55%
 F1 17,500
 LRU   hit ratio 35.62%
 Clock hit ratio 36.24%
-Clock - LRU hit ratio delta 0.61%
+Clock - LRU hit ratio delta 0.62%
 
 F1 20,000
 LRU   hit ratio 36.17%
 Clock hit ratio 36.84%
-Clock - LRU hit ratio delta 0.67%
+Clock - LRU hit ratio delta 0.66%
 ```
 
 ### DS1
@@ -444,7 +444,7 @@ const data = {
     },
     {
       label: 'Clock',
-      data: [17.13, 24.33, 29.16, 33.64, 37.05, 39.32, 41.46, 43.10],
+      data: [17.13, 24.33, 29.15, 33.60, 37.00, 39.31, 41.44, 43.10],
       borderColor: Utils.color(4),
     },
     {
@@ -476,28 +476,28 @@ Clock - LRU hit ratio delta 0.89%
 
 OLTP 750
 LRU   hit ratio 28.28%
-Clock hit ratio 29.16%
-Clock - LRU hit ratio delta 0.88%
+Clock hit ratio 29.15%
+Clock - LRU hit ratio delta 0.87%
 
 OLTP 1,000
 LRU   hit ratio 32.83%
-Clock hit ratio 33.64%
-Clock - LRU hit ratio delta 0.81%
+Clock hit ratio 33.60%
+Clock - LRU hit ratio delta 0.77%
 
 OLTP 1,250
 LRU   hit ratio 36.20%
-Clock hit ratio 37.05%
-Clock - LRU hit ratio delta 0.84%
+Clock hit ratio 37.00%
+Clock - LRU hit ratio delta 0.79%
 
 OLTP 1,500
 LRU   hit ratio 38.69%
-Clock hit ratio 39.32%
-Clock - LRU hit ratio delta 0.63%
+Clock hit ratio 39.31%
+Clock - LRU hit ratio delta 0.61%
 
 OLTP 1,750
 LRU   hit ratio 40.78%
-Clock hit ratio 41.46%
-Clock - LRU hit ratio delta 0.67%
+Clock hit ratio 41.44%
+Clock - LRU hit ratio delta 0.65%
 
 OLTP 2,000
 LRU   hit ratio 42.46%
